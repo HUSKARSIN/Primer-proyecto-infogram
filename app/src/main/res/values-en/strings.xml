@@ -3,4 +3,7 @@
     <string name="app_name">ProyectoInfogram</string>
     <string name="nombre_de_usuario">Username</string>
     <string name="contrasena">Password</string>
+    <string name="button_text">LOGIN</string>
+    <string name="crea_una_aqui">crea una aqui</string>
+    <string name="no_tienes_cuenta">¿No_tienes_cuenta? ,</string>
 </resources>
