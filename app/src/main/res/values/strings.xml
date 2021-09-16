@@ -12,4 +12,9 @@
     <string name="confirme_Contrasena">Confirme contraseña</string>
     <string name="button_text_create_account">UNETE</string>
     <string name="title_crear_cuenta">Crear cuenta</string>
+    <string name="carlos_vargascardview">Carlos Vargas</string>
+    <string name="hace_cardview">hace</string>
+    <string name="dias_cardview">" 4 dias "</string>
+    <string name="me_gusta_cardview">10 me gusta</string>
+
 </resources>
