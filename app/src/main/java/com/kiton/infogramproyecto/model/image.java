@@ -1,13 +1,13 @@
 package com.kiton.infogramproyecto.model;
 
 public class image {
-    private String urlImagen;
+    private String urlImage;
     private String username;
     private String cantidadDias;
     private String cantidadMeGusta;
 
-    public image(String urlImagen, String username, String cantidadDias, String cantidadMeGusta) {
-        this.setUrlImagen(urlImagen);
+    public image(String urlImage, String username, String cantidadDias, String cantidadMeGusta) {
+        this.setUrlImagen(urlImage);
         this.setUsername(username);
         this.setCantidadDias(cantidadDias);
         this.setCantidadMeGusta(cantidadMeGusta);
@@ -15,11 +15,11 @@ public class image {
 
 
     public String getUrlImagen() {
-        return urlImagen;
+        return urlImage;
     }
 
     public void setUrlImagen(String urlImagen) {
-        this.urlImagen = urlImagen;
+        this.urlImage = urlImagen;
     }
 
     public String getUsername() {

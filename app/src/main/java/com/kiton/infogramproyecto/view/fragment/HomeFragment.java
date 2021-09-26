@@ -99,9 +99,9 @@ public class HomeFragment extends Fragment {
     public ArrayList<Image> buidImages(){
         ArrayList<Image> images = new ArrayList<>();
 
-       // images.add(new Image("","Carlos Valdivia","2 dias","1 me gusta"));
-       // images.add(new Image("","Carlos Valdivia","2 dias","1 me gusta"));
-       // images.add(new Image("","Carlos Valdivia","2 dias","1 me gusta"));
+        // images.add(new Image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUGMqGJU-jER72zzYig6bQ28BtN3GZl7cDLA&usqp=CAU","Carlos Valdivia","2 dias","1 me gusta"));
+        // images.add(new Image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJM2mkLhQwIlH-eoFTlHyPQhSag8R9ozCyTA&usqp=CAU","Luis peres","3 dias","2 me gusta"));
+        // images.add(new Image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDMZZAxQEPRexnEXR7xFnFjRLL_bm2W8RUlw&usqp=CAU","William Jaimes","4 dias","3 me gusta"));
         return images;
     }
 }

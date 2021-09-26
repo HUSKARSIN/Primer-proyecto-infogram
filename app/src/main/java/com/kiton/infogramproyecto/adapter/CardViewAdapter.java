@@ -42,10 +42,10 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.CardVi
     public void onBindViewHolder(@NonNull CardViewHolder holder, int position) {
         Image image = images.get(position);
         //imagen
-
-        //holder.usernameCardView.setText(image.getUsername());
-        //holder.cantidadDiasCardView.setText(image.getCantidadDias());
-        //holder.cantidadMeGustaCarView.setText(image.getCantidadMeGusta());
+        // Picasso.get().load(image.getUrlImage()).into(helder.imageCardView);
+       // holder.usernameCardView.setText(image.getUsername());
+       // holder.cantidadDiasCardView.setText(image.getCantidadDias());
+       // holder.cantidadMeGustaCarView.setText(image.getCantidadMeGusta());
     }
 
     @Override
