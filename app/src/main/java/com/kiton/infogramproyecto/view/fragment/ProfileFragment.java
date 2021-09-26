@@ -1,14 +1,22 @@
 package com.kiton.infogramproyecto.view.fragment;
 
+import android.media.Image;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.kiton.infogramproyecto.R;
+import com.kiton.infogramproyecto.adapter.CardViewAdapter;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +69,38 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+            View view = inflater.inflate(R.layout.fragment_profile,container,false);
+        //toolbar
+        showToolBar("",false,view);
+        // recyclerview
+        RecyclerView recyclerView = view.findViewById(R.id.recycler_view_profile);
+
+        //layout manager
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+        //el adapter
+
+        CardViewAdapter cardViewAdapter = new CardViewAdapter(buidImages(),R.layout.cardview_image,getActivity());
+        recyclerView.setAdapter(cardViewAdapter);
+
+        return view;
+    }
+    public void showToolBar(String titulo, boolean botonSubir,View view){
+        Toolbar toolbar = view.findViewById(R.id.toolbar_profile);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(titulo);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(botonSubir);
+    }
+    //listad e imagenes
+    public ArrayList<Image> buidImages(){
+        ArrayList<Image> images = new ArrayList<>();
+
+        // images.add(new Image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUGMqGJU-jER72zzYig6bQ28BtN3GZl7cDLA&usqp=CAU","Carlos Valdivia","2 dias","1 me gusta"));
+        // images.add(new Image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJM2mkLhQwIlH-eoFTlHyPQhSag8R9ozCyTA&usqp=CAU","Luis peres","3 dias","2 me gusta"));
+        // images.add(new Image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDMZZAxQEPRexnEXR7xFnFjRLL_bm2W8RUlw&usqp=CAU","William Jaimes","4 dias","3 me gusta"));
+        return images;
     }
 }
