@@ -20,5 +20,7 @@
     <string name="buscar_item">Buscar</string>
     <string name="home_item">Home</string>
     <string name="yo_item">Yo</string>
+    <string name="carlos_vargas_cardview">carlos vargas</string>
+    <string name="title_home_fragment">home</string>
 
 </resources>
