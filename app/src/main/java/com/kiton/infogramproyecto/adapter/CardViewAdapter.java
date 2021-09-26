@@ -1,6 +1,7 @@
 package com.kiton.infogramproyecto.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.Image;
 import android.text.Layout;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.kiton.infogramproyecto.R;
+import com.kiton.infogramproyecto.view.ImageDetailActivity;
 
 import java.util.ArrayList;
 
@@ -43,9 +45,19 @@ public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.CardVi
         Image image = images.get(position);
         //imagen
         // Picasso.get().load(image.getUrlImage()).into(helder.imageCardView);
-       // holder.usernameCardView.setText(image.getUsername());
-       // holder.cantidadDiasCardView.setText(image.getCantidadDias());
-       // holder.cantidadMeGustaCarView.setText(image.getCantidadMeGusta());
+        // holder.usernameCardView.setText(image.getUsername());
+        // holder.cantidadDiasCardView.setText(image.getCantidadDias());
+        // holder.cantidadMeGustaCarView.setText(image.getCantidadMeGusta());
+
+        //oncliklistener
+
+        holder.imageCarView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, ImageDetailActivity.class);
+                activity.startActivity(intent);
+            }
+        });
     }
 
     @Override
